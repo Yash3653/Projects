@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMI Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f3f5;
+        }
+        .result-box {
+            padding: 2rem;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Your BMI is: <span class="text-primary">{{ bmi }}</span></h2>
+        <p>You are <strong>{{ category }}</strong>.</p>
+        <a href="/" class="btn btn-outline-secondary mt-3">Calculate Again</a>
+    </div>
+</body>
+</html>

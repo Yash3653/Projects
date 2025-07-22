@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insurance Charge Predictor</title>
+</head>
+<body>
+    <h2>Predict Insurance Charges</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="age"><br>
+        Sex:
+        <select name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select><br>
+        BMI: <input type="text" name="bmi"><br>
+        Children: <input type="number" name="children"><br>
+        Smoker:
+        <select name="smoker">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br>
+        Region:
+        <select name="region">
+            <option value="southwest">Southwest</option>
+            <option value="southeast">Southeast</option>
+            <option value="northwest">Northwest</option>
+            <option value="northeast">Northeast</option>
+        </select><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
